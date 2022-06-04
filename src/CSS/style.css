@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #FFF;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    max-width: 1200px;
+}
+
+.header_left,
+.header_center,
+.header_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_left h1 {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: 60px;
+}
+
+.header_center ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_center li {
+    list-style-type: none;
+    margin: 0 40px 0 0;
+}
+
+.header_center a {
+    color: #585E65;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.header_center a:hover {
+    color: #4C6EF5;
+    border-bottom: 5px solid #4C6EF5;
+    padding-bottom: 25px;
+}
+
+.header_center #promocoes {
+    display: none;
+}
+
+.header_center #mudarTema,
+.header_center #promocoes,
+.header_right button {
+    color: #FFF;
+    font-weight: bold;
+    width: 145px;
+    height: 40px;
+    background: #4C6EF5;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.header_center #mudarTema:hover,
+.header_center #promocoes:hover,
+.header_right button:hover {
+    transform: scale(1.03);
+}
+
+.menu_mobile {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu_mobile div {
+    background-color: #4C6EF5;
+    border-radius: 5px;
+    width: 45px;
+    height: 5px;
+    margin: 5px 0 0 0;
+}
+
+.main {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.bg1 {
+    background-color: #FFF;
+}
+
+.bg2 {
+    background-image: url("https://img.freepik.com/fotos-gratis/tecnologia-de-canal-omni-do-negocio-de-varejo-on-line_31965-3010.jpg?w=2000");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: all 1s;
+}
+
+.section_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+    margin: auto;
+    max-width: 1500px;
+}
+
+.card {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 380px;
+    margin: 34px 20px;
+    padding: 0px 20px;
+    transition: all 0.5s;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 4px 30px -15px rgba(0, 0, 0, 0.8);
+}
+
+.card .card_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card .card_top img {
+    align-self: center;
+    width: 200px;
+    height: 130px;
+    margin: 20px 20% 16px 20%;
+}
+
+.card .card_top h3,
+.card .card_top p {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.card .card_top h3 {
+    font-size: 13px;
+}
+
+.card .card_top p {
+    padding: 15px 0 0 15px;
+    font-size: 11px;
+}   
+
+.card .card_bottom button {
+    color: #FFF;
+    font-weight: bold;
+    background-color: #4C6EF5;
+    border-radius: 8px;
+    width: 200px;
+    height: 48px;
+    margin: 36px 0 0 0;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.card .card_bottom button:hover {
+    background-color: springgreen;
+}
+
+
+@media only screen and (max-width: 1350px) {
+
+    .header {
+        padding: 0 40px;
+        width: 100%;
+    }
+
+    .menu_mobile {
+        display: flex;
+    }
+
+    .header_center button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header_center #promocoes {
+        display: flex;
+    }
+
+    .header_center {
+        background-color: rgba(20, 30, 40, 0.9);
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        height: calc(100vh - 80px);
+        left: -150%;
+        transition: all 200ms;
+    }
+
+    .header_center.active {
+        left: 0;
+    }
+
+    .header_center ul {
+        flex-direction: column;
+    }
+
+    .header_center li {
+        padding: 20px 0px; 
+        margin: 0;
+    }
+
+    .header_center a {
+        color: #FFF;
+    }
+
+    .header_right {
+        display: none;
+    }
+
+    .card .card_top img {
+        width: 200px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .header {
+        padding: 0 40px;
+    }   
+
+    .card .card_bottom button {
+        color: #FFF;
+        font-weight: bold;
+        background-color: #4C6EF5;
+        border-radius: 8px;
+        width: 200px;
+    }
+
+}
