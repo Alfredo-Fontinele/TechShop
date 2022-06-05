@@ -94,6 +94,7 @@ header {
 .header_center #promocoes:hover,
 .header_right button:hover {
     transform: scale(1.03);
+    background-color: springgreen;
 }
 
 .menu_mobile {
@@ -122,12 +123,9 @@ header {
 }
 
 .bg2 {
-    background-image: url("https://img.freepik.com/fotos-gratis/tecnologia-de-canal-omni-do-negocio-de-varejo-on-line_31965-3010.jpg?w=2000");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    transition: all 1s;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .section_cards {
@@ -210,6 +208,11 @@ header {
     .header {
         padding: 0 40px;
         width: 100%;
+    }
+
+    .header_center a:hover {
+        border-bottom: none;
+        padding-bottom: none;
     }
 
     .menu_mobile {
